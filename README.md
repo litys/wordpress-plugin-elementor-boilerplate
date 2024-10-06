@@ -1,4 +1,6 @@
-# Boilerplate for Elementor Custom Blocks / Widgets
+# WordPress Widget Boilerplate for Elementor
+
+Write custom blocks with a pre-configured TypeScript/SCSS bundler and a prepared object-oriented plugin.
 
 ## What's inside
 
