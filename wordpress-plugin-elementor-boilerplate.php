@@ -19,6 +19,8 @@ class LityS_Elementor_Custom_Widget {
     add_action('wp_enqueue_scripts', [$this, 'enqueue_assets']);
     add_action('elementor/widgets/widgets_registered', [$this, 'register_widgets']);
     add_action('elementor/init', [$this, 'add_elementor_categories']);
+
+    load_plugin_textdomain('litys-custom-blocks', false, dirname(plugin_basename(__FILE__)) . '/languages/');
   }
 
   public function enqueue_assets() {
@@ -49,7 +51,3 @@ function litys_elementor_custom_widget_init() {
   new LityS_Elementor_Custom_Widget();
 }
 add_action('plugins_loaded', 'litys_elementor_custom_widget_init');
-
-add_action('plugins_loaded', function () {
-  load_plugin_textdomain('litys-custom-blocks', false, dirname(plugin_basename(__FILE__)) . '/languages/');
-});
